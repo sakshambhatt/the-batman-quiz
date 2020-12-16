@@ -143,7 +143,9 @@ function playQuiz(array) {
   for(var i = 0; i < highscores.length; i++) {
     console.log(highscores[i].name + " " + highscores[i].score);
   }
-  console.log("If you think that you matched or beat the highscores, send a screenshot to the creator of the quiz");
+  if(score >= 9) {
+    console.log("I think you beat or matched one of the highscores, please send a screenshot to the creator");
+  }
 }
 
 playQuiz(questionBank);
